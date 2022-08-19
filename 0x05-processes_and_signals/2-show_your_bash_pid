@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# displays list of bash's processes with hierarchy
+# shellcheck disable=SC2009
+# ps --pid=$$ uxf
+ps auxf | grep bash

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# indefinitely displays string & accepts signals
+while 'true'; do
+	echo "To infinity and beyond"
+	trap 'echo "I am invincible!!!"' TERM
+	sleep 2
+done

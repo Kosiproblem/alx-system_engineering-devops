@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# terminates '7-highlander' by sending an interrupt signal
+pkill -f "highlander" --signal SIGKILL

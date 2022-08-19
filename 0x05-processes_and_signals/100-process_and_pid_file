@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# indefinite printer of text and responder to 3 signals
+exit_on_SIGTERM () {
+	echo "I hate the kill command"
+	sudo rm /var/run/myscript.pid
+	exit
+}
+exit_on_SIGQUIT () {
+	rm /var/run/myscript.pid
+	exit
+}
+exit_on_SIGINT () {
+	echo "Y U no love me?!"
+	exit
+}
+
+echo "$$" > /var/run/myscript.pid
+trap exit_on_SIGTERM TERM
+trap exit_on_SIGQUIT QUIT
+trap exit_on_SIGINT INT
+
+while 'true'; do
+	echo "To infinity and beyond"
+	sleep 2
+done
