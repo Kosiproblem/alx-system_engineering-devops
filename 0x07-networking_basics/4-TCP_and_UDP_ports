@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script is able to display only listening ports on the system
+# with the corresponding application's PID and name
+netstat -lp
