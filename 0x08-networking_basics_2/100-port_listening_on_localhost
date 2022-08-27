@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# use telent and netcat to communicate b/n network interfaces
+nc -l localhost 98
